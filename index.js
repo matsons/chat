@@ -10,7 +10,7 @@ app.get('/', function(req, res){
             console.log(err);
             res.status(err.status).end();
         } else {
-            console.log('Severd up: ');
+            console.log('Severd up: /index.html');
         }
     });
 });
@@ -26,6 +26,6 @@ io.on('connection', function(socket){
   });
 });
 
-server.listen(5000, function(){
-  console.log('listening on *:5000');
+server.listen(app.get('port'), function(){
+  console.log('listening on '+app.get('port'));
 });
