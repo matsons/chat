@@ -27,5 +27,6 @@
   "homepage": "https://github.com/matsons/chat#readme",
   "engines": {
       "node": "4.3.1"
-  }
+  },
+  "start": "node index.js"
 }
