@@ -3,7 +3,14 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname+'/index.html');
+  res.sendFile(__dirname+'/index.html', function(err) {
+      if (err) {
+          console.log(err);
+          res.status(err.status).end();
+      } else {
+          console.log('Severd up: ');
+      }
+  });
 });
 
 io.on('connection', function(socket){
