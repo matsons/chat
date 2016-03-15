@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/matsons/chat/issues"
   },
-  "homepage": "https://github.com/matsons/chat#readme"
+  "homepage": "https://github.com/matsons/chat#readme",
+  "engines": {
+      "node": "4.1.1"
+  }
 }
