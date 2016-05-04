@@ -29,12 +29,69 @@
 	font-weight: bold;
 	font-size: 1.5em;
 	text-align: center;
+  flex: initial;
 }
+
+button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
 
 body { font: 13px Helvetica, Arial; }
 form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
 form input { border: 0; padding: 10px; width: 90%; margin-right: 0.5%;}
-form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+
 #messages { list-style-type: none; margin: 0; padding: 0; }
 #messages ul { padding: 5px 10px; }
 #messages ul:nth-child(odd) { background: #eee; }
+
+.formFooter {
+  /**
+   * Lay out the children of this container with
+   * flexbox, which is horizontal by default.
+   */
+  display: flex;
+
+  /**
+   * Align the children in the center, along
+   * the main axis, which is horizontal in this case.
+   */
+  align-items: center;
+
+   /**
+   * Make the container put as much space as possible
+   * between its children, with the children at either
+   * end laying flush against the container's edges.
+   */
+  justify-content: space-between;
+
+  border-top: 1px solid #D7DBDD;
+  padding: 10px;
+}
+
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 64px;
+
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #aaaaaa;
+}
+
+.bottom .msgInput {
+  height: 64px;
+  background: #dddddd;
+  border: none;
+  width: calc(100% - 64px);
+  position: absolute;
+  left: 0; top: 0;
+  padding: 0 5%;
+  resize: none;
+  padding-top: 24px;
+  overflow: scroll;
+  /* 0.5 * height - some margin (8px) */
+}
